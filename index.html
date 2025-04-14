@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe | By Anant Kumar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">TIC TAC TOE</h1>
+        
+        <div class="game-mode">
+            <button id="offline-2p" class="glow-btn">2 Players (Offline)</button>
+            <button id="offline-ai" class="glow-btn">VS AI (Offline)</button>
+            <button id="online-mp" class="glow-btn">Online Multiplayer</button>
+        </div>
+
+        <div class="difficulty-select hidden">
+            <h3>Select AI Difficulty:</h3>
+            <button id="easy" class="glow-btn">Easy</button>
+            <button id="medium" class="glow-btn">Medium</button>
+            <button id="hard" class="glow-btn">Hard</button>
+        </div>
+
+        <div class="online-setup hidden">
+            <h3>Online Game:</h3>
+            <input type="text" id="room-id" placeholder="Enter Room ID" class="glow-input">
+            <button id="join-room" class="glow-btn">Join Room</button>
+            <button id="create-room" class="glow-btn">Create Room</button>
+            <p id="online-status">Disconnected</p>
+        </div>
+
+        <div class="game hidden">
+            <div class="turn-indicator">
+                <span id="turn-text">Player X's Turn</span>
+            </div>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="scoreboard">
+                <div>Player X: <span id="score-x">0</span></div>
+                <div>Player O: <span id="score-o">0</span></div>
+            </div>
+            <button id="reset-game" class="glow-btn">Reset Game</button>
+            <button id="back-to-menu" class="glow-btn">Back to Menu</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="creator">Created by <span class="neon-text">Anant Kumar</span></p>
+    </footer>
+
+    <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+    <audio id="draw-sound" src="sounds/draw.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
